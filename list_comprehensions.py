@@ -14,7 +14,8 @@ def run():
     multiples_of_36 = [i for i in range(1,100000) if i % 36 == 0]
     print(multiples_of_36)
 
-
+    squares_1_to_5 = [i ** 2 for i in range(1,6)]
+    print(squares_1_to_5)
 
 if __name__ == '__main__':
     run()

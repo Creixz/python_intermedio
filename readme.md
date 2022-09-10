@@ -65,3 +65,12 @@ print(name_var(valor)) -> Esto no llama a la función, más bien, se utiliza la 
 name_filter_list = list(filter(lambda x: x%2 != 0, list_to_filter))
 ```
 - Filter recibe dos parámetros que son una función anónima y la lista que será filtrada.
+
+### Map
+
+- Es otra de las funciones de orden superior, y se encarga de modificar de forma uniforme o proporcional a todos los elementos de una determina lista, y se define de la siguiente manera.
+```
+name_filter_list = list(map(lambda x: x ** 2, list_to_filter))
+```
+- Map recibe dos parámetro que son una función anónima y la lista que será modificada.
+
