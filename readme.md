@@ -70,7 +70,16 @@ name_filter_list = list(filter(lambda x: x%2 != 0, list_to_filter))
 
 - Es otra de las funciones de orden superior, y se encarga de modificar de forma uniforme o proporcional a todos los elementos de una determina lista, y se define de la siguiente manera.
 ```
-name_filter_list = list(map(lambda x: x ** 2, list_to_filter))
+name_map_list = list(map(lambda x: x ** 2, list_to_filter))
 ```
 - Map recibe dos parámetro que son una función anónima y la lista que será modificada.
 
+### Reduce
+
+- Es otra de las funciones de orden superior, y se encara de reducir los elementos de una lista a un determinado valor, y se define de la siguiente manera.
+```
+from functools import reduce
+
+name_reduce = reduce(lambda a, b: a * b, list_to_reduce)
+```
+- **Reduce** primero se debe importar de **functools** y recibe dos parámetros que son una función anónima con dos argumentos y la operación que reducirá los elementos de la función.
