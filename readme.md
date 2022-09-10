@@ -55,3 +55,13 @@ lambda argumentos: expresión
 name_var = lambda string: string == string[::-1] -> esto retorna un objeto del tipo función y se guarda en la variable, no es el nombre de la función.
 print(name_var(valor)) -> Esto no llama a la función, más bien, se utiliza la variable con el paréntesis para invocar al objeto de tipo función.
 ```
+## High order functions: filter, map y reduce
+
+### Filter
+
+- Es una de las funciones de orden superior, y se encarga de filtrar una determinada lista bajo ciertas condiciones, y se define de la siguiente manera.
+ 
+```
+name_filter_list = list(filter(lambda x: x%2 != 0, list_to_filter))
+```
+- Filter recibe dos parámetros que son una función anónima y la lista que será filtrada.
