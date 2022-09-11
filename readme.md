@@ -107,3 +107,50 @@ Cuando python nos avisa que tenemos un error en el código nos avienta un mensaj
 ### Debugging 
 
 - Para aplicar esta técnica si utilizas Visual Studio Code, presiona **Ctrl-Shift-D** y luego **Run and Debug** para poder examinar tu código paso a paso con las opciones disponibles y encontrar el error de lógica de manera más eficiente.
+
+### Manejo de excepciones
+
+#### Try and except
+
+- El **except** solo funciona para los errores del tipo TypeError.
+- Se produce el error debido a que se ingresa un valor que no se esperaba por lo que el **try-except** permite enviar un mensaje en caso de que se coloque un valor no válido.
+```
+def palindromo(string):
+    return string == string[::-1]
+
+try:
+    print(palindromo(1))
+except TypeError:
+    print("Solo se puede ingresar strings")
+```
+
+#### Raise
+
+- Usaremos **raise** en caso de que el **try** no detecte el error y no pueda lanzarse el exception.
+```
+def palindromo(string):
+    try:
+        if len(string) == 0:
+            raise ValueError("No se puede ingresar una cadena vacía")
+        return string == string[::-1]
+    except ValueError as ve:
+        print(ve)
+        return False
+
+try:
+    print(palindromo(""))
+except TypeError:
+    print("Solo se puede ingresar strings")
+```
+
+#### Finally
+
+- Se podría utilizar **finally** después de un **try** para cerrar un archivo dentro de Python o cerrar una conexión a la base de datos o liberar recursos externos.
+```
+try:
+    f = open("archivo.txt")
+    #Aquí hacer cualquier cosa con el archivo
+finally:
+    f.close()
+```
+- Es imperativo usar el finally para cerrar correctamente un archivo o una base de datos ya que si se cortará el programa de forma abrupta por algún error, esto podría dañar el archivo o base de datos que se está utilizando.
