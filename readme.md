@@ -103,3 +103,7 @@ Cuando python nos avisa que tenemos un error en el código nos avienta un mensaj
 ### Elevar una excepción
 
 - Cuando tenemos una excepción en python lo que sucede es que se crea un objeto de tipo exception que se va moviendo a través de los bloques de código hasta llegar al bloque principal si es que no se maneja dicha excepción en algún bloque intermedio el programa se interrumpe y genera el traceback.
+
+### Debugging 
+
+- Para aplicar esta técnica si utilizas Visual Studio Code, presiona **Ctrl-Shift-D** y luego **Run and Debug** para poder examinar tu código paso a paso con las opciones disponibles y encontrar el error de lógica de manera más eficiente.
