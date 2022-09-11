@@ -166,3 +166,19 @@ def palindromo(string):
 print(palindromo(""))
 
 ```
+
+## Manejo de Archivos
+
+- Aprenderemos a manejar achivos de texto con la palabra reservada **with**
+- Esta palabra reservada se usa para controlar el flujo de nuestro archivo por si se cierra inesperadamente y el archivo no se rompa.
+```
+with open("./ruta/del/archivo.txt", "r") as f:
+```
+- La función **open** abre un archivo y lleva varios parámetros, sin embargo dos obligatorios que son: la **ruta del archivo** que estará en **string** y el **modo de apertura** que son r: Read, w: Write and a: Append.
+    + r -> Solo lectura
+    + r+ -> Lectura y escritura
+    + w -> Solo escritura. Sobre escribe el archivo si existe. Crea el archivo si no existe
+    + w+ -> Escritura y lectura. Sobre escribe el archivo si existe. Crea el archivo si no existe
+    + a -> Añadido (agregar contenido). Crea el archivo si éste no existe
+    + a+ -> Añadido (agregar contenido) y lectura. Crea el archivo si éste no existe.
+- El keyword **as** se utiliza para darle un nombre más sencillo a lo que estamos trabajando, en este caso **f**.
