@@ -154,3 +154,15 @@ finally:
     f.close()
 ```
 - Es imperativo usar el finally para cerrar correctamente un archivo o una base de datos ya que si se cortará el programa de forma abrupta por algún error, esto podría dañar el archivo o base de datos que se está utilizando.
+
+### Usar Assert Statements para el manejo de errores
+
+- Usamos los **Assert Statement** en reemplazo de un **try-except** para afirmar una condición y en caso esta sea falsa, se imprimirá un mensaje en consola a través de **AssertionError**
+```
+def palindromo(string):
+    assert len(string) > 0, "No se puede ingresar una cadena vacía"
+    return string == string[::-1]
+
+print(palindromo(""))
+
+```
